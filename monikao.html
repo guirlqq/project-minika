@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia da Minika</title>
+
+    <style>
+body{
+   background-color: pink;
+}
+
+
+    .painel{
+        margin: auto;
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: 50px;
+        font-family:cursive ;
+        border: 1px solid black;
+
+    }
+    #claro{
+         width: 60px;
+         height: 40px;
+         background-color: pink;
+         border: 1px solid black;
+         border-radius: 10px;
+         color: white;
+         margin-left: -80px;
+
+    }
+   
+    #nao{
+        position: absolute;
+        width: 60px;
+        height: 40px;
+        background-color: pink;
+        border: 1px solid black;
+        border-radius: 10px;
+        color: white;
+        margin-left: 10px;
+
+   
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+    <h1>Feliz Dia da Minika</h1>
+
+    <img src="https://gifs.eco.br/wp-content/uploads/2021/06/gifs-de-coracao-37.gif" alt>
+
+    <h5>Aceita passar o resto da VIDA TODA comigo?</h5>
+
+    <a href="Feliz Dia das Mulheres!(quase mulher).gif"><button id="claro">Claro!</button></a>
+    <button onmouseover="fuja()" id="nao">Não!</button>
+
+    </div>
+
+    <script>
+        function fuja(){
+          var botaoNao = document.getElementById("nao")
+
+          var larguraJanela = window.innerWidth;
+          var alturaJanela = window.innerHeight;
+
+          var maxX = larguraJanela - botaoNao.offsetWidth
+          var maxY = alturaJanela - botaoNao.offsetHeight
+
+          var aleatorioX = Math.floor(Math.random() * maxX);
+          var aleatorioY = Math.floor(Math.random() * maxY);
+
+          botaoNao.style.left = aleatorioX + "px";
+          botaoNao.style.top = aleatorioY + "px";
+
+        }
+    </script>
+    
+</body>
+</html>
